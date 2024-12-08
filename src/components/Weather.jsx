@@ -13,7 +13,7 @@ const Weather = () => {
                     <p>Pressure: {weather.pressure}</p>
                     <p>Sunset: {weather.sunset.toLocaleTimeString()}</p>
                 </>
-            }:{weather.message}
+            }{weather.message}
         </div>
     )
 }
