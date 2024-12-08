@@ -18,7 +18,7 @@ export const weatherSlice = (state = defaultState, action) => {
         case DATA_SUCCESS:
         return {...state,message:"" ,...action.payload};
         case DATA_ERROR:
-            return {...state,message:"There is no this city"};
+            return {...state,message:"This city doesn't exist"};
 
      default:return state;
     }

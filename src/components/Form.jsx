@@ -8,7 +8,7 @@ const Form = () => {
     const dispatch = useDispatch();
     const getCity = e => {
         e.preventDefault();
-        fetchWeather(city, dispatch)
+        void fetchWeather(city, dispatch)
         setCity('');
     }
 

@@ -15,9 +15,8 @@ export const fetchWeather=async (city,dispatch)=> {
             temp: data.main.temp,
             pressure: data.main.pressure,
             sunset: new Date(data.sys.sunset * 1000)
-    }));
-    }
-    catch  {
+        }));
+    } catch{
         dispatch(dataError())
     }
 }
