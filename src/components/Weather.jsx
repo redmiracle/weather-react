@@ -1,12 +1,8 @@
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
+import {useSelector} from "react-redux";
 
-const Weather = ({message}) => {
+const Weather = () => {
 
     const weather=useSelector(state => state.weather)
-    useEffect(() => {
-        console.log(weather.message)
-    },[weather.message])
 
     return (
         <div className={'infoWeath'}>
@@ -17,8 +13,7 @@ const Weather = ({message}) => {
                     <p>Pressure: {weather.pressure}</p>
                     <p>Sunset: {weather.sunset.toLocaleTimeString()}</p>
                 </>
-            }
-            {weather.message}
+            }:{weather.message}
         </div>
     )
 }

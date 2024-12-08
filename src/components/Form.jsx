@@ -2,7 +2,7 @@ import {useState} from "react";
 import {fetchWeather} from "../api/api.js";
 import {useDispatch} from "react-redux";
 
-const Form = ({getWeather}) => {
+const Form = () => {
     const [city, setCity] = useState('');
     const dispatch = useDispatch();
     const getCity = e => {
