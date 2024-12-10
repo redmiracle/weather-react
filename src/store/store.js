@@ -1,5 +1,7 @@
-import {combineReducers, legacy_createStore as createStore} from "redux";
-import {weatherSlice} from "../reducers/weatherSlice.js";
+import {configureStore} from "@reduxjs/toolkit";
+import weather from "../features/weather/weatherSlice.js";
 
-const rootReducer = combineReducers({weather:weatherSlice})
-export const store=createStore(rootReducer);
+
+export const store=configureStore({
+    reducer:{weather}
+});
